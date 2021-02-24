@@ -1,0 +1,29 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "cargapontual",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "RestoqueDadosClientesOK.csv",
+				"container": "blobstorage"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ID;Tipo Cliente;Canal;Nome;Sobrenome;e-mail;Data nascimento;Gênero;CPF;Fone;Celular;Deletado;Endereço principal;Endereço ;Rua;Cidade;Bairro;Número;Estado;CEP;complemento;Complemento 2;Nome do contato;Latitude;Longitude",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

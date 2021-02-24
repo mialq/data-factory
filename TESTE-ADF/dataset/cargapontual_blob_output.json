@@ -1,0 +1,350 @@
+{
+	"name": "cargapontual_blob_output",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "cargapontual",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "carga.parquet",
+				"container": "blobstorage"
+			},
+			"compressionCodec": "none"
+		},
+		"schema": [
+			{
+				"name": "CODIGO_CLIENTE",
+				"type": "UTF8"
+			},
+			{
+				"name": "CONCEITO",
+				"type": "UTF8"
+			},
+			{
+				"name": "TIPO_VAREJO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CLIENTE_VAREJO",
+				"type": "UTF8"
+			},
+			{
+				"name": "FILIAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "PONTUALIDADE",
+				"type": "UTF8"
+			},
+			{
+				"name": "TIPO_BLOQUEIO",
+				"type": "UTF8"
+			},
+			{
+				"name": "ENDERECO",
+				"type": "UTF8"
+			},
+			{
+				"name": "PF_PJ",
+				"type": "UTF8"
+			},
+			{
+				"name": "RG_IE",
+				"type": "UTF8"
+			},
+			{
+				"name": "CPF_CGC",
+				"type": "UTF8"
+			},
+			{
+				"name": "CIDADE",
+				"type": "UTF8"
+			},
+			{
+				"name": "COMPLEMENTO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CEP",
+				"type": "UTF8"
+			},
+			{
+				"name": "TELEFONE",
+				"type": "UTF8"
+			},
+			{
+				"name": "FAX",
+				"type": "UTF8"
+			},
+			{
+				"name": "LIMITE_CREDITO",
+				"type": "UTF8"
+			},
+			{
+				"name": "ANIVERSARIO",
+				"type": "UTF8"
+			},
+			{
+				"name": "SEM_CREDITO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CADASTRAMENTO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DDD",
+				"type": "UTF8"
+			},
+			{
+				"name": "SEXO",
+				"type": "UTF8"
+			},
+			{
+				"name": "TIPO_TELEFONE",
+				"type": "UTF8"
+			},
+			{
+				"name": "UF",
+				"type": "UTF8"
+			},
+			{
+				"name": "TIMESTAMP",
+				"type": "UTF8"
+			},
+			{
+				"name": "EMAIL",
+				"type": "UTF8"
+			},
+			{
+				"name": "ULTIMA_COMPRA",
+				"type": "UTF8"
+			},
+			{
+				"name": "DATA_PARA_TRANSFERENCIA",
+				"type": "UTF8"
+			},
+			{
+				"name": "BAIRRO",
+				"type": "UTF8"
+			},
+			{
+				"name": "LIMITE_CREDITO_TOTAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "STATUS",
+				"type": "UTF8"
+			},
+			{
+				"name": "NAO_CONSULTA_CHEQUE",
+				"type": "UTF8"
+			},
+			{
+				"name": "OBS",
+				"type": "UTF8"
+			},
+			{
+				"name": "CARTAO_AFINIDADE",
+				"type": "UTF8"
+			},
+			{
+				"name": "TIPO_LOGRADOURO",
+				"type": "UTF8"
+			},
+			{
+				"name": "NUMERO",
+				"type": "UTF8"
+			},
+			{
+				"name": "LEMBRETE_SENHA",
+				"type": "UTF8"
+			},
+			{
+				"name": "LOGRADOURO",
+				"type": "UTF8"
+			},
+			{
+				"name": "NOME_FAMILIA",
+				"type": "UTF8"
+			},
+			{
+				"name": "PAIS",
+				"type": "UTF8"
+			},
+			{
+				"name": "SENHA",
+				"type": "UTF8"
+			},
+			{
+				"name": "ESTADO_CIVIL",
+				"type": "UTF8"
+			},
+			{
+				"name": "PROFISSAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "VENDEDOR",
+				"type": "UTF8"
+			},
+			{
+				"name": "APELIDO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CODIGO_CONTATO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CHECKSUM_ORIGEM",
+				"type": "UTF8"
+			},
+			{
+				"name": "OBS_FATURAMENTO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CODIGO_CLIENTE_VALIDO",
+				"type": "UTF8"
+			},
+			{
+				"name": "EMAIL_CODIGO_FILIAL",
+				"type": "UTF8"
+			},
+			{
+				"name": "EMAIL_DATA_ALTERACAO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DDD_CELULAR",
+				"type": "UTF8"
+			},
+			{
+				"name": "CELULAR",
+				"type": "UTF8"
+			},
+			{
+				"name": "FILIAL_LELIS",
+				"type": "UTF8"
+			},
+			{
+				"name": "FILIAL_BOBO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CODIGO_VENDEDOR_LELIS",
+				"type": "UTF8"
+			},
+			{
+				"name": "CODIGO_VENDEDOR_BOBO",
+				"type": "UTF8"
+			},
+			{
+				"name": "CODIGO_SITE",
+				"type": "UTF8"
+			},
+			{
+				"name": "NEWSLETTER",
+				"type": "UTF8"
+			},
+			{
+				"name": "FILIAL_LELIS_SEIS_MESES",
+				"type": "UTF8"
+			},
+			{
+				"name": "CODIGO_VENDEDOR_LELIS_SEIS_MESES",
+				"type": "UTF8"
+			},
+			{
+				"name": "RECEBER_CORREIO",
+				"type": "UTF8"
+			},
+			{
+				"name": "RECEBER_SMS",
+				"type": "UTF8"
+			},
+			{
+				"name": "RECEBER_EMAIL",
+				"type": "UTF8"
+			},
+			{
+				"name": "DATA_OPTOUT_CORREIO",
+				"type": "UTF8"
+			},
+			{
+				"name": "DATA_OPTOUT_EMAIL",
+				"type": "UTF8"
+			},
+			{
+				"name": "DATA_OPTOUT_SMS",
+				"type": "UTF8"
+			},
+			{
+				"name": "MOTIVO_OPTOUT_EMAIL",
+				"type": "UTF8"
+			},
+			{
+				"name": "SENHA2",
+				"type": "UTF8"
+			},
+			{
+				"name": "FILIAL_BOBO_SEIS_MESES",
+				"type": "UTF8"
+			},
+			{
+				"name": "CODIGO_VENDEDOR_BOBO_SEIS_MESES",
+				"type": "UTF8"
+			},
+			{
+				"name": "LX_STATUS_CLIENTE",
+				"type": "UTF8"
+			},
+			{
+				"name": "ENVIADO_SERASA",
+				"type": "UTF8"
+			},
+			{
+				"name": "NOME_MAE",
+				"type": "UTF8"
+			},
+			{
+				"name": "ENVIADO_SPC",
+				"type": "UTF8"
+			},
+			{
+				"name": "OBS_RETAGUARDA",
+				"type": "UTF8"
+			},
+			{
+				"name": "B2C_BLOQUEADO",
+				"type": "UTF8"
+			},
+			{
+				"name": "ID_CRM_PFJ",
+				"type": "UTF8"
+			},
+			{
+				"name": "INATIVO_PARA_CRM",
+				"type": "UTF8"
+			},
+			{
+				"name": "ID_ACAO_CAMPANHA",
+				"type": "UTF8"
+			},
+			{
+				"name": "ID",
+				"type": "UTF8"
+			},
+			{
+				"name": "CLIENTE_MICROVIX",
+				"type": "UTF8"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

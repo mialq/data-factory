@@ -1,0 +1,1056 @@
+{
+	"name": "Customer",
+	"properties": {
+		"activities": [
+			{
+				"name": "Search Customer",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false,
+							"prefix": ""
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "CODIGO_CLIENTE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CODIGO_CLIENTE",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "CONCEITO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CONCEITO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "TIPO_VAREJO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TIPO_VAREJO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "CLIENTE_VAREJO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CLIENTE_VAREJO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "FILIAL",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "FILIAL",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "PONTUALIDADE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "PONTUALIDADE",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "TIPO_BLOQUEIO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TIPO_BLOQUEIO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "ENDERECO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ENDERECO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "PF_PJ",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "PF_PJ",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "RG_IE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "RG_IE",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "CPF_CGC",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CPF_CGC",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "CIDADE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CIDADE",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "COMPLEMENTO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "COMPLEMENTO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "CEP",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CEP",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "TELEFONE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TELEFONE",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "FAX",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "FAX",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "LIMITE_CREDITO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LIMITE_CREDITO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "ANIVERSARIO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ANIVERSARIO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "SEM_CREDITO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "SEM_CREDITO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "CADASTRAMENTO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CADASTRAMENTO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "DDD",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DDD",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "SEXO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "SEXO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "TIPO_TELEFONE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TIPO_TELEFONE",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "UF",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "UF",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "TIMESTAMP",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TIMESTAMP",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "EMAIL",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "EMAIL",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "ULTIMA_COMPRA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ULTIMA_COMPRA",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "DATA_PARA_TRANSFERENCIA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DATA_PARA_TRANSFERENCIA",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "BAIRRO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "BAIRRO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "LIMITE_CREDITO_TOTAL",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LIMITE_CREDITO_TOTAL",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "STATUS",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "STATUS",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "NAO_CONSULTA_CHEQUE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "NAO_CONSULTA_CHEQUE",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "OBS",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "OBS",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "CARTAO_AFINIDADE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CARTAO_AFINIDADE",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "TIPO_LOGRADOURO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TIPO_LOGRADOURO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "NUMERO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "NUMERO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "LEMBRETE_SENHA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LEMBRETE_SENHA",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "LOGRADOURO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LOGRADOURO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "NOME_FAMILIA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "NOME_FAMILIA",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "PAIS",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "PAIS",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "SENHA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "SENHA",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "ESTADO_CIVIL",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ESTADO_CIVIL",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "PROFISSAO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "PROFISSAO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "VENDEDOR",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "VENDEDOR",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "APELIDO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "APELIDO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "CODIGO_CONTATO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CODIGO_CONTATO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "CHECKSUM_ORIGEM",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CHECKSUM_ORIGEM",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "OBS_FATURAMENTO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "OBS_FATURAMENTO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "CODIGO_CLIENTE_VALIDO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CODIGO_CLIENTE_VALIDO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "EMAIL_CODIGO_FILIAL",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "EMAIL_CODIGO_FILIAL",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "EMAIL_DATA_ALTERACAO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "EMAIL_DATA_ALTERACAO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "DDD_CELULAR",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DDD_CELULAR",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "CELULAR",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CELULAR",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "FILIAL_LELIS",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "FILIAL_LELIS",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "FILIAL_BOBO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "FILIAL_BOBO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "CODIGO_VENDEDOR_LELIS",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CODIGO_VENDEDOR_LELIS",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "CODIGO_VENDEDOR_BOBO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CODIGO_VENDEDOR_BOBO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "CODIGO_SITE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CODIGO_SITE",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "NEWSLETTER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "NEWSLETTER",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "FILIAL_LELIS_SEIS_MESES",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "FILIAL_LELIS_SEIS_MESES",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "CODIGO_VENDEDOR_LELIS_SEIS_MESES",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CODIGO_VENDEDOR_LELIS_SEIS_MESES",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "RECEBER_CORREIO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "RECEBER_CORREIO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "RECEBER_SMS",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "RECEBER_SMS",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "RECEBER_EMAIL",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "RECEBER_EMAIL",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "DATA_OPTOUT_CORREIO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DATA_OPTOUT_CORREIO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "DATA_OPTOUT_EMAIL",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DATA_OPTOUT_EMAIL",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "DATA_OPTOUT_SMS",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DATA_OPTOUT_SMS",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "MOTIVO_OPTOUT_EMAIL",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "MOTIVO_OPTOUT_EMAIL",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "SENHA2",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "SENHA2",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "FILIAL_BOBO_SEIS_MESES",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "FILIAL_BOBO_SEIS_MESES",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "CODIGO_VENDEDOR_BOBO_SEIS_MESES",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CODIGO_VENDEDOR_BOBO_SEIS_MESES",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "LX_STATUS_CLIENTE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LX_STATUS_CLIENTE",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "ENVIADO_SERASA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ENVIADO_SERASA",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "NOME_MAE",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "NOME_MAE",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "ENVIADO_SPC",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ENVIADO_SPC",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "OBS_RETAGUARDA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "OBS_RETAGUARDA",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "B2C_BLOQUEADO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "B2C_BLOQUEADO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "ID_CRM_PFJ",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ID_CRM_PFJ",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "INATIVO_PARA_CRM",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "INATIVO_PARA_CRM",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "ID_ACAO_CAMPANHA",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ID_ACAO_CAMPANHA",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "ID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ID",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "CLIENTE_MICROVIX",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CLIENTE_MICROVIX",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "conector_input",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "output_parquet",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "core"
+		},
+		"annotations": [],
+		"lastPublishTime": "2021-02-21T18:37:40Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

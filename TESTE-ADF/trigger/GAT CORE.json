@@ -1,0 +1,31 @@
+{
+	"name": "GAT CORE",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Customer",
+					"type": "PipelineReference"
+				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "Carga Pontual",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 60,
+				"startTime": "2021-02-21T15:10:00",
+				"endTime": "2021-02-22T18:04:00",
+				"timeZone": "E. South America Standard Time"
+			}
+		}
+	}
+}
